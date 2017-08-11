@@ -8,7 +8,6 @@ var Article = require('./models/Article.js');
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Run Morgan for Logging
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,7 +16,6 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static('./public'));
 
-//mongoose.connect('mongodb://localhost/nytreact');
 mongoose.connect('mongodb://heroku_jns4phwt:61tt9c1oiotedcl5ndjhfv9pn5@ds019936.mlab.com:19936/heroku_jns4phwt');
 
 
